@@ -1,0 +1,57 @@
+
+use Illuminate\Http\Request;
+use App\Models\Model;
+use DataTables;
+use Auth;
+
+model
+Model
+
+public function model()
+    {
+        return view('model');
+    }
+
+public function allModel()
+    {        
+        return Datatables::of(Model::all())
+        ->addColumn('action', function($row){       
+            $btn = '<a href="#" onclick="viewFunction(\''.$row->id.'\');" class="edit btn btn-info btn-sm">View</a> ';
+            $btn = $btn.' <a href="#" onclick="editFunction(\''.$row->id.'\');" class="edit btn btn-primary btn-sm">Edit</a>';
+            $btn = $btn.' <a href="/delModel/'.$row->id.'" class="edit btn btn-danger btn-sm" onclick="return confirm(\'Yakin mau dihapus\');">Delete</a>';
+            return $btn;        })
+        ->rawColumns(['action'])
+        ->make(true);
+    }
+
+
+public function addModel(Request $request)
+    {
+        $model = new Model;
+        if($request->id == null ){
+            $model->kode = $request->kode;
+            $model->create_by = Auth::user()->user_id;
+            $model->save();
+            return redirect('/model')->with('sukses','Data Berhasil di Simpan');
+        }else{
+            $modelUpdate = Model::find($request->id);
+            $modelUpdate->update_by = Auth::user()->user_id;
+            $modelUpdate->update($request->all());
+            return redirect('/model')->with('sukses','Update Berhasil di Simpan');
+        }
+    }
+
+    public function getModelById($id){
+        $model = Model::find($id);
+        return $model;
+    }
+
+
+    public function delModel($id)
+    {
+        $model = Model::find($id);
+        $model->delete();
+        return redirect('/model')->with('sukses','Data Berhasil dihapus');
+        
+    }
+    
