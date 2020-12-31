@@ -25,9 +25,9 @@
 <section class="content">
 <h1 class="m-0 text-dark">Apps</h1>
 <div class="row">
-  <div class="col-lg-3 col-md-6 mb-4 col-sm-3">
+  <div class="col-12 col-sm-6 col-md-3">
     <a href="https://kms.pegadaian.co.id/login" target="_blank">
-  <div class="card" style="width: 18rem;">
+  <div class="card">
     <img src="/images/kms.jpg" class="card-img-top" alt="...">
   </a>
     <div class="card-body">
@@ -37,8 +37,8 @@
     </div>
   </div>
   </div>
-  <div class="col-lg-3 col-md-6 mb-4 col-sm-3">
-  <div class="card" style="width: 18rem;">
+  <div class="col-12 col-sm-6 col-md-3">
+  <div class="card" >
     <a href="https://g-leads.disprz.com/" target="_blank">
     <img src="/images/learning-01.png" class="card-img-top" alt="...">
     </a>
@@ -49,8 +49,8 @@
     </div>
   </div>
   </div>
-  <div class="col-lg-3 col-md-6 mb-4 col-sm-3">
-  <div class="card" style="width: 18rem;">
+  <div class="col-12 col-sm-6 col-md-3">
+  <div class="card" >
     <a href="https://sites.google.com/pegadaian.co.id/learningwallet" target="_blank">
     <img src="/images/wallet2.jpg" class="card-img-top" alt="...">
     </a>
@@ -62,8 +62,8 @@
   </div>
   </div>
 
-  <div class="col-lg-3 col-md-6 mb-4 col-sm-3">
-    <div class="card" style="width: 18rem;">
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card" >
       <a href="https://www.pegadaian.co.id/" target="_blank">
       <img src="/images/pegadaian.jpg" class="card-img-top" alt="...">
       </a>
@@ -75,8 +75,8 @@
     </div>
     </div>
 
-    <div class="col-lg-3 col-md-6 mb-4 col-sm-3">
-      <div class="card" style="width: 18rem;">
+    <div class="col-12 col-sm-6 col-md-3">
+      <div class="card" >
         <a href="https://kms.pegadaian.co.id/elearning/index.php?c=library/" target="_blank">
         <img src="/images/library.jpg" class="card-img-top" alt="...">
         </a>
@@ -88,8 +88,8 @@
       </div>
     </div>
 
-    <div class="col-lg-3 col-md-6 mb-4 col-sm-3">
-      <div class="card" style="width: 18rem;">
+    <div class="col-12 col-sm-6 col-md-3">
+      <div class="card" >
         <a href="https://hcms.pegadaian.co.id/" target="_blank">
         <img src="/images/hcm.jpg" class="card-img-top" alt="...">
         </a>
@@ -110,7 +110,7 @@
     <div class="container-fluid">
       <!-- Info boxes -->
       <div class="row">
-        <div class="col-lg-3 col-md-6 mb-4 col-sm-3">
+        <div class="col-12 col-sm-6 col-md-3">
           <div class="info-box">
             <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
 
@@ -126,7 +126,7 @@
           <!-- /.info-box -->
         </div>
         <!-- /.col -->
-        <div class="col-lg-3 col-md-6 mb-4 col-sm-3">
+        <div class="col-12 col-sm-6 col-md-3">
           <div class="info-box mb-3">
             <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
 
@@ -143,7 +143,7 @@
         <!-- fix for small devices only -->
         <div class="clearfix hidden-md-up"></div>
 
-        <div class="col-lg-3 col-md-6 mb-4 col-sm-3">
+        <div class="col-12 col-sm-6 col-md-3">
           <div class="info-box mb-3">
             <span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
 
@@ -156,7 +156,7 @@
           <!-- /.info-box -->
         </div>
         <!-- /.col -->
-        <div class="col-lg-3 col-md-6 mb-4 col-sm-3">
+        <div class="col-12 col-sm-6 col-md-3">
           <div class="info-box mb-3">
             <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
 
