@@ -24,6 +24,10 @@ Route::get('/kamera', function () {
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/cari', [App\Http\Controllers\DepartementController::class, 'searchDepartement'])->name('autocomplete');
+  
+// autocomplete  searchDepartement
+// 
 Route::group(['middleware' => ['role:admin|user']], function () {
     Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'profile'])->name('profile');
     Route::get('/getDepartementByDivisi/{id}', [App\Http\Controllers\DepartementController::class, 'getDepartementByDivisi'])->name('getDepartementByDivisi');

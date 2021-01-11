@@ -99,7 +99,10 @@
                         </div>
                         <div class="form-group">
                             <label for="unit_usul">Unit Kerja</label>
-                            <input type="text" name="unit_usul" class="form-control" id="unit_usul">
+                            <input type="text" name="unit_usul" class="typeahead form-control" id="unit_usul">
+
+
+
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
@@ -220,20 +223,36 @@
 
 
 
-
-
+    <script type="text/javascript">
+        
+</script>
 @stop
 
 @section('css')
     {{--
     <link rel="stylesheet" href="/css/admin_custom.css"> --}}
     <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"/>
 @stop
-
-@section('js')
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    
+    @section('js')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script>
     <script>
         $(document).ready(function() {
             awal();
+
+            var path = "{{ route('autocomplete') }}";
+                $('input.typeahead').typeahead({
+                    source:  function (query, process) {
+                    return $.get(path, { query: query }, function (data) {
+                        // alert(data);
+                            return process(data);
+                        });
+                    }
+                });
+
+
         });
 
         function awal() {
