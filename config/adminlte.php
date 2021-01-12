@@ -294,8 +294,8 @@ return [
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'xxx',
-                    'url'  => '#',
+                    'text' => 'Rep01',
+                    'url'  => '/rep01',
                 ], 
                 [
                     'text' => 'ttt',

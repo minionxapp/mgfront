@@ -94,6 +94,12 @@ Route::group(['middleware' => ['role:admin']], function () {
     Route::post('/addProjectActivity', [App\Http\Controllers\ProjectActivityController::class, 'addProjectActivity'])->name('addProjectActivity');
     Route::get('/getProjectActivityById/{id}', [App\Http\Controllers\ProjectActivityController::class, 'getProjectActivityById'])->name('getProjectActivityById');
     Route::get('/delProjectActivity/{id}', [App\Http\Controllers\ProjectActivityController::class, 'delProjectActivity'])->name('delProjectActivity');
-        
+     
+    
+    Route::get('/rep01', [App\Http\Controllers\Rep01Controller::class, 'rep01'])->name('rep01');
+    Route::get('/program', [App\Http\Controllers\Rep01Controller::class, 'getProgram'])->name('program');
+    Route::get('/skill/{program}/{th}', [App\Http\Controllers\Rep01Controller::class, 'getSkillByProgram'])->name('skill');
+    Route::get('/modul/{program}/{skill}', [App\Http\Controllers\Rep01Controller::class, 'getmodulBySkill'])->name('modul');
+   
 });
 
